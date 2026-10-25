@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Capri — desktop companion</title>
+  <meta name="description" content="Capri lives on your Windows desktop. She talks back, moves when you ask and does real things. Join the beta or help build her.">
+  <meta property="og:title" content="Capri">
+  <meta property="og:description" content="She lives on your desktop. Join the beta or help build her.">
+  <meta property="og:image" content="https://theagencymge.github.io/capri/media/poster.jpg">
+  <meta name="theme-color" content="#0c0b0f">
+  <link rel="icon" href="media/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="#top" aria-label="Capri"><span class="slash"></span>Capri</a>
+    <nav>
+      <a href="#beta">Beta</a>
+      <a href="#build">Developers</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <h1 class="word">Capri</h1>
+      <p class="lede">She lives on your desktop. Talk to her, send her across the screen, let her open your apps.</p>
+    </section>
+
+    <section class="reel-wrap">
+      <video class="reel" src="media/trailer.mp4" poster="media/poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Capri trailer"></video>
+      <button class="sound" type="button" aria-pressed="false">Sound on</button>
+    </section>
+
+    <section class="join">
+      <form id="beta" class="form" data-kind="beta" novalidate>
+        <h2>Try her first</h2>
+        <p>Windows beta builds, before anyone else.</p>
+        <label>Email <input name="email" type="email" autocomplete="email" required maxlength="254"></label>
+        <label>Windows
+          <select name="platform">
+            <option>Windows 11</option>
+            <option>Windows 10</option>
+          </select>
+        </label>
+        <label class="trap" aria-hidden="true">Leave empty <input name="website" tabindex="-1" autocomplete="off"></label>
+        <button type="submit">Join the beta</button>
+        <p class="status" role="status" aria-live="polite"></p>
+      </form>
+
+      <form id="build" class="form" data-kind="developer" novalidate>
+        <h2>Build her with us</h2>
+        <p>Electron, TypeScript, animation and AI. Open to anyone who ships.</p>
+        <label>Email <input name="email" type="email" autocomplete="email" required maxlength="254"></label>
+        <label>GitHub <input name="github" autocomplete="username" maxlength="120" placeholder="Username (optional)"></label>
+        <fieldset>
+          <legend>What you'd work on</legend>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="skills" value="Animation"><span>Animation</span></label>
+            <label class="chip"><input type="checkbox" name="skills" value="AI"><span>AI</span></label>
+            <label class="chip"><input type="checkbox" name="skills" value="Electron / TypeScript"><span>Electron / TypeScript</span></label>
+            <label class="chip"><input type="checkbox" name="skills" value="Design"><span>Design</span></label>
+            <label class="chip"><input type="checkbox" name="skills" value="Testing"><span>Testing</span></label>
+          </div>
+        </fieldset>
+        <label class="trap" aria-hidden="true">Leave empty <input name="website" tabindex="-1" autocomplete="off"></label>
+        <button type="submit">Join as a developer</button>
+        <p class="status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>Unofficial fan project. Not affiliated with CD PROJEKT RED, Studio Trigger or Netflix.</p>
+  </footer>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
